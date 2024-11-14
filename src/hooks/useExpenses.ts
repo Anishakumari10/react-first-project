@@ -3,9 +3,11 @@ import { getExpenses } from "../service/Expense-service";
 import { Expense } from "../model/Expense";
 
 const UseExpenses = () => {
+    
     const [expenses, setExpenses] = useState<Expense[]>([]);
     const [errors, setError] = useState(null);
     const [isLoading, setLoader] = useState(false);
+
   useEffect(() => {
     //api call to the backend system
     setLoader(true);
